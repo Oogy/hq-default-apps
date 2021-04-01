@@ -7,7 +7,7 @@ spec:
   project: {{ .Values.spec.project }}
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: {{ .Values.metricsServer.namespace }}
+    namespace: {{ .Values.spec.argoNamespace }}
   source:
     path: {{ .Values.metricsServer.path }}
     repoURL: {{ .Values.spec.source.repoURL }}

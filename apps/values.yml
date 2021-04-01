@@ -8,5 +8,4 @@ spec:
   argoNamespace: argo-cd-prod
 metricsServer:
   appName: metrics-server
-  namespace: kube-system
   path: metrics-server
