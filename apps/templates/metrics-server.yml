@@ -2,13 +2,15 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: metrics-server
-  namespace: {{ .Values.argoNamespace }}
+  namespace: argo-cd-prod
+  finalizers:
+  - resources-finalizer.argocd.argoproj.io
 spec:
   destination:
     namespace: kube-system
-    server: {{ .Values.destination.server }}
-  project: {{ .Values.project }}
+    server: {{ .Values.spec.destination.server }}
+  project: default
   source:
     path: metrics-server
-    repoURL: {{ .Values.source.repoURL }}
-    targetRevision: {{ .Values.source.targetRevision }}
+    repoURL: https://github.com/3letteragency/hq-default-apps.git
+    targetRevision: HEAD

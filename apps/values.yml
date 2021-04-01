@@ -1,7 +1,3 @@
-argoNamespace: argo-cd-prod
-project: default
-destination:
-  server: https://kubernetes.default.svc
-source:
-  repoURL: https://github.com/3letteragency/hq-default-apps.git
-  targetRevision: HEAD
+spec:
+  destination:
+    server: https://kubernetes.default.svc
