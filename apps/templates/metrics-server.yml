@@ -7,7 +7,7 @@ spec:
   project: default
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: argo-cd-prod
+    namespace: kube-system
   source:
     path: metrics-server
     repoURL: 'https://github.com/3letteragency/hq-default-apps'
