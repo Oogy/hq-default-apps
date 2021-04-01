@@ -1,14 +1,14 @@
 apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
-  name: {{ .Values.metricsServer.appName }}
-  namespace: {{ .Values.spec.argoNamespace }}
+  name: metrics-server
+  namespace: argo-cd-prod
 spec:
-  project: {{ .Values.spec.project }}
+  project: default
   destination:
     server: {{ .Values.spec.destination.server }}
-    namespace: {{ .Values.spec.argoNamespace }}
+    namespace: argo-cd-prod
   source:
-    path: {{ .Values.metricsServer.path }}
-    repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision }}
+    path: metrics-server
+    repoURL: 'https://github.com/3letteragency/hq-default-apps'
+    targetRevision: HEAD
