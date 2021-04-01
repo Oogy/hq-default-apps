@@ -2,13 +2,13 @@ apiVersion: argoproj.io/v1alpha1
 kind: Application
 metadata:
   name: metrics-server
-  namespace: {{ .Values.spec.argoNamespace }}
+  namespace: {{ .Values.argoNamespace }}
 spec:
   destination:
     namespace: kube-system
-    server: {{ .Values.spec.destination.server }}
-  project: {{ .Values.spec.project }}
+    server: {{ .Values.destination.server }}
+  project: {{ .Values.project }}
   source:
     path: metrics-server
-    repoURL: {{ .Values.spec.source.repoURL }}
-    targetRevision: {{ .Values.spec.source.targetRevision }}
+    repoURL: {{ .Values.source.repoURL }}
+    targetRevision: {{ .Values.source.targetRevision }}
