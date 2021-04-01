@@ -10,5 +10,5 @@ spec:
     namespace: kube-system
   source:
     path: metrics-server
-    repoURL: 'https://github.com/3letteragency/hq-default-apps'
+    repoURL: https://github.com/3letteragency/hq-default-apps
     targetRevision: HEAD
