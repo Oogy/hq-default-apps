@@ -8,7 +8,7 @@ spec:
     namespace: kube-system
     server: {{ .Values.spec.destination.server }}
   project: {{ .Values.spec.project }}
-  source: {{ .Values.spec.source.repoURL }}
+  source:
     path: metrics-server
     repoURL: {{ .Values.spec.source.repoURL }}
     targetRevision: {{ .Values.spec.source.targetRevision }}
