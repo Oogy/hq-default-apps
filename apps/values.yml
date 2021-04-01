@@ -1,6 +1,5 @@
 spec:
   destination:
-    server: 'https://kubernetes.default.svc'
+    server: https://kubernetes.default.svc
   source:
     repoURL: https://github.com/3letteragency/hq-default-apps.git
-    targetRevision: HEAD
