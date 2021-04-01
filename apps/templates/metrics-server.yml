@@ -11,6 +11,6 @@ spec:
     server: {{ .Values.spec.destination.server }}
   project: default
   source:
-    path: metrics-server
+    path: default
     repoURL: https://github.com/3letteragency/hq-default-apps.git
     targetRevision: HEAD
